@@ -1,0 +1,27 @@
+{
+  "name": "test-alegra-web-client",
+  "authors": [
+    "Stivenson Rincón <stivenson.rpm@gmail.com>"
+  ],
+  "description": "prueba para trabajar en alegra.com",
+  "main": "index.html",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "alegra",
+    "javascript",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "about.me/stivenson",
+  "private": true,
+  "dependencies": {
+    "angular-bootstrap": "^1.3.3",
+    "angular-resource": "^1.5.5",
+    "angular-route": "^1.5.5",
+    "angular-ui-router": "^0.3.0",
+    "angular-ui-bootstrap": "^1.3.3",
+    "bootstrap": "^3.3.6"
+  }
+}

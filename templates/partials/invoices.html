@@ -1,0 +1,35 @@
+<div class="text-center">
+  <div class="btn-group" role="group" aria-label="...">
+    <button ng-click="refresh()" type="button" class="btn btn-info"> <span class="glyphicon glyphicon-refresh"></span> Refrescar</button>
+    <button ng-click="greater100000()" type="button" class="btn btn-{{varcontrols.btm100000color}}"> <span class="glyphicon glyphicon-signal"></span> 
+    {{varcontrols.btn100000text}}</button>
+    <button ng-click="changeView()" type="button" class="btn btn-info"> <span class="glyphicon glyphicon-tasks"></span> Ampliar Facturas</button>
+  </div>
+</div>
+<br/>
+<div ng-show="varcontrols.getting" class="text-center">
+  <img src="img/download.gif"> Obteniendo...
+</div>
+<div ng-show="varcontrols.errorzoho" class="alert alert-danger text-center">
+  <b>invoice.zoho.com</b> Demora mucho en responder, por favor intente de nuevo..<br/><br/>
+  <button ng-click="refresh()" type="button" class="btn btn-info"> 
+  <span class="glyphicon glyphicon-refresh"></span> Refrescar</button>
+</div>
+<div class="table-responsive overflow">
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th>#</th>
+      <th>Referencia Factura</th>
+      <th>Nombre Comprador</th>
+      <th>Fecha</th>
+      <th>Total (COP)</th>
+    </tr>
+    <tr ng-repeat="(key, invo) in list">
+      <td>{{key+1}}</td>
+      <td>{{invo.invoice_id}}</td>
+      <td>{{invo.customer_name}}</td>
+      <td>{{invo.date}}</td>
+      <td>${{invo.total}}</td>
+    </tr>
+  </table>
+</div>
